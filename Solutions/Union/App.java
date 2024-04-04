@@ -1,3 +1,5 @@
+// Luis Eduardo Meduna - 42203341
+
 public class App {
     public static void main(String[] args) throws Exception {
         Union u = new Union(3);
