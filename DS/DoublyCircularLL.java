@@ -13,12 +13,12 @@ public class DoublyCircularLL {
     if (isEmpty()) {
       head = tail = newNode;
       head.setNext(head);
-      head.setPrev(tail);
+      head.setPrevious(tail);
     } else {
       tail.setNext(newNode);
-      newNode.setPrev(tail);
+      newNode.setPrevious(tail);
       newNode.setNext(head);
-      head.setPrev(newNode);
+      head.setPrevious(newNode);
       tail = newNode;
     }
 
@@ -34,7 +34,7 @@ public class DoublyCircularLL {
       head = tail = null;
     } else {
       head = head.getNext();
-      head.setPrev(tail);
+      head.setPrevious(tail);
       tail.setNext(head);
     }
 
