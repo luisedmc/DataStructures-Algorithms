@@ -73,10 +73,8 @@ public class LinkedList {
       return null;
     }
 
-    if (Size() == 1) { // Only one node on the list
-      Node toRemove = removeHead();
-      return toRemove;
-    }
+    if (Size() == 1) // Only one node on the list
+      return removeHead();
 
     // Find second last node
     Node secondLast = head;
@@ -90,6 +88,25 @@ public class LinkedList {
 
     return toRemove;
   }
+
+  // Node removeLast() {
+  //   if (Size() == 0) return null;
+
+  //   Node tmp = head;
+  //   Node pre = head;
+  //   while (tmp.getNext() != null) {
+  //     pre = tmp;
+  //     tmp = tmp.getNext();
+  //   }
+
+  //   tail = pre;
+  //   tail.setNext(null);
+  //   count--;
+
+  //   if (Size() == 0) head = tail = null;
+
+  //   return tmp;
+  // }
 
   // Remove at the specified position
   Node removeAt(int pos) {
