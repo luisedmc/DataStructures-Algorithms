@@ -10,8 +10,14 @@ public class LinkedList {
   // Insert a new node at the beginning of the list, same as Push
   void insert(int data) {
     Node node = new Node(data);
-    node.setNext(head);
-    head = node;
+
+    if (isEmpty())
+      head = node;
+    else {
+      node.setNext(head);
+      head = node;
+    }
+
     count++;
   }
 
@@ -90,22 +96,22 @@ public class LinkedList {
   }
 
   // Node removeLast() {
-  //   if (Size() == 0) return null;
+  // if (Size() == 0) return null;
 
-  //   Node tmp = head;
-  //   Node pre = head;
-  //   while (tmp.getNext() != null) {
-  //     pre = tmp;
-  //     tmp = tmp.getNext();
-  //   }
+  // Node tmp = head;
+  // Node pre = head;
+  // while (tmp.getNext() != null) {
+  // pre = tmp;
+  // tmp = tmp.getNext();
+  // }
 
-  //   tail = pre;
-  //   tail.setNext(null);
-  //   count--;
+  // tail = pre;
+  // tail.setNext(null);
+  // count--;
 
-  //   if (Size() == 0) head = tail = null;
+  // if (Size() == 0) head = tail = null;
 
-  //   return tmp;
+  // return tmp;
   // }
 
   // Remove at the specified position
